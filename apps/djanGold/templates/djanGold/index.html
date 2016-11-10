@@ -46,9 +46,9 @@
             <input type="submit" value="Find Gold!" />
         </form>
         <div class="activities">
-            <h3>Activities:</h3> {% if activities %}
+            <h3>Activities:</h3> {% if request.session.activity %}
             <ul>
-                {% for class, activity in activities %}
+                {% for class, activity in request.session.activity reversed %}
                 <li class={{class}}>{{activity}}</li>
                 {% endfor %}
             </ul>

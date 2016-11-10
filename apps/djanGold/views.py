@@ -19,6 +19,7 @@ def addActivity(request, num, action, location):
         request.session['activity'].append(['earn', 'Earned %d golds from the %s! %s' % (num, location, timestamp)])
     elif location == 'house':
         request.session['activity'].append(['earn', 'Earned %d golds from the %s! %s' % (num, location, timestamp)])
+    print request.session['activity']
 
 
 def index(request):
